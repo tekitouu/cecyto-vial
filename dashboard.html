@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   CECyTO Vial | 03 / 13 &middot; Panel general
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="app-shell">
+   <header class="topbar">
+    <a class="brand" href="dashboard.html">
+     <img alt="CECyTO Vial &mdash; Educaci&oacute;n vial y gesti&oacute;n de conductores" class="brand-logo" src="logo-cecyto-vial.png"/>
+    </a>
+    <div class="top-user">
+     <div class="user-meta">
+      <strong id="headerName">
+       Mariana Torres
+      </strong>
+      <br/>
+      <span class="muted" id="headerRole">
+       Administraci&oacute;n
+      </span>
+     </div>
+     <div class="avatar" id="headerAvatar">
+      MT
+     </div>
+    </div>
+   </header>
+   <div class="workspace">
+    <aside class="sidebar">
+     <div class="nav-label">
+      Men&uacute; principal
+     </div>
+     <nav class="nav">
+      <a class="active" href="dashboard.html">
+       <span class="nav-ico">
+        ⌂
+       </span>
+       Inicio
+      </a>
+      <a class="" href="reglamento.html">
+       <span class="nav-ico">
+        &nearrow;
+       </span>
+       Reglamento vial
+      </a>
+      <a class="" href="cuestionario.html">
+       <span class="nav-ico">
+        &checkmark;
+       </span>
+       Cuestionarios
+      </a>
+      <a class="" data-admin-only="true" href="conductores.html">
+       <span class="nav-ico">
+        ♙
+       </span>
+       Conductores
+      </a>
+      <a class="" data-admin-only="true" href="estadisticas.html">
+       <span class="nav-ico">
+        ▥
+       </span>
+       Estad&iacute;sticas
+      </a>
+      <a class="" href="perfil.html">
+       <span class="nav-ico">
+        ◎
+       </span>
+       Mi perfil
+      </a>
+      <a class="" data-logout="true" href="#logout">
+       <span class="nav-ico">
+        &rarrhk;
+       </span>
+       Cerrar sesi&oacute;n
+      </a>
+     </nav>
+     <div class="location-card">
+      <strong>
+       Villa Victoria
+      </strong>
+      Estado de M&eacute;xico
+      <br/>
+     </div>
+    </aside>
+    <main class="main">
+     <div class="breadcrumb">
+      Inicio / Panel general
+     </div>
+     <div class="page-head">
+      <div>
+       <h1 id="dashboardGreeting">
+        Bienvenida, Mariana
+       </h1>
+       <p>
+        Consulta los m&oacute;dulos educativos y da seguimiento a los registros.
+       </p>
+      </div>
+     </div>
+     <div class="grid stats" data-admin-only="true">
+      <article class="card stat" style="--accent:var(--sky)">
+       <div class="label">
+        Conductores registrados
+       </div>
+       <div class="value" id="statDrivers">
+        128
+       </div>
+       <div class="foot">
+        Registros de demostraci&oacute;n
+       </div>
+      </article>
+      <article class="card stat" style="--accent:var(--pink)">
+       <div class="label">
+        Cuestionarios realizados
+       </div>
+       <div class="value" id="statQuizzes">
+        240
+       </div>
+       <div class="foot">
+        192 aprobados &middot; 48 no aprobados
+       </div>
+      </article>
+      <article class="card stat" style="--accent:var(--yellow)">
+       <div class="label">
+        Aprobaci&oacute;n
+       </div>
+       <div class="value">
+        80%
+       </div>
+       <div class="foot">
+        Proporci&oacute;n de cuestionarios aprobados
+       </div>
+      </article>
+     </div>
+     <div class="section-title">
+      <h2>
+       Accesos r&aacute;pidos
+      </h2>
+      <span class="muted">
+       Contin&uacute;a donde lo necesitas
+      </span>
+     </div>
+     <div class="grid quick-grid">
+      <article class="card quick-card">
+       <div class="mini-icon" style="--accent:var(--sky)">
+        &nearrow;
+       </div>
+       <h3>
+        Reglamento vial
+       </h3>
+       <p>
+        Consulta faltas y recomendaciones.
+       </p>
+       <a class="btn secondary small" href="reglamento.html">
+        Consultar reglamento
+       </a>
+      </article>
+      <article class="card quick-card">
+       <div class="mini-icon" style="--accent:var(--pink)">
+        &checkmark;
+       </div>
+       <h3>
+        Cuestionarios
+       </h3>
+       <p>
+        Eval&uacute;a tus conocimientos viales.
+       </p>
+       <a class="btn secondary small" href="cuestionario.html">
+        Ir a cuestionarios
+       </a>
+      </article>
+      <article class="card quick-card" data-admin-only="true">
+       <div class="mini-icon" style="--accent:var(--yellow)">
+        ♙
+       </div>
+       <h3>
+        Conductores
+       </h3>
+       <p>
+        Administra y consulta registros.
+       </p>
+       <a class="btn secondary small" data-admin-only="true" href="conductores.html">
+        Gestionar conductores
+       </a>
+      </article>
+     </div>
+     <section data-driver-only="true" id="driverHub">
+      <div class="section-title">
+       <h2>
+        Tu espacio de conductor
+       </h2>
+       <span class="muted">
+        Aprende, practica y lleva tu progreso
+       </span>
+      </div>
+      <div class="grid stats driver-progress-grid">
+       <article class="card stat" style="--accent:var(--sky)">
+        <div class="label">
+         Cuestionarios completados
+        </div>
+        <div class="value" id="myQuizCount">
+         0
+        </div>
+        <div class="foot">
+         Tus intentos guardados en este navegador
+        </div>
+       </article>
+       <article class="card stat" style="--accent:var(--pink)">
+        <div class="label">
+         Mejor resultado
+        </div>
+        <div class="value" id="myBestScore">
+         &mdash;
+        </div>
+        <div class="foot">
+         Tu mejor puntuaci&oacute;n
+        </div>
+       </article>
+       <article class="card stat" style="--accent:var(--yellow)">
+        <div class="label">
+         Reglas guardadas
+        </div>
+        <div class="value" id="myFavoriteCount">
+         0
+        </div>
+        <div class="foot">
+         Temas para repasar despu&eacute;s
+        </div>
+       </article>
+      </div>
+      <div class="grid quick-grid driver-tools-grid">
+       <article class="card quick-card">
+        <div class="mini-icon" style="--accent:var(--lavender)">
+         &starf;
+        </div>
+        <h3>
+         Mis reglas guardadas
+        </h3>
+        <p>
+         Guarda los temas que quieres repasar y accede a ellos r&aacute;pidamente.
+        </p>
+        <a class="btn secondary small" href="reglamento.html">
+         Explorar y guardar reglas
+        </a>
+       </article>
+       <article class="card quick-card">
+        <div class="mini-icon" style="--accent:var(--yellow)">
+         &checkmark;
+        </div>
+        <h3>
+         Checklist del veh&iacute;culo
+        </h3>
+        <p>
+         Marca los puntos revisados antes de iniciar un trayecto.
+        </p>
+        <div class="muted" id="checklistProgress" style="margin:4px 0 10px">
+         0 de 7 revisados
+        </div>
+        <button class="secondary small" id="resetChecklist" type="button">
+         Reiniciar checklist
+        </button>
+       </article>
+       <article class="card quick-card">
+        <div class="mini-icon" style="--accent:var(--sky)">
+         !
+        </div>
+        <h3>
+         Reportar riesgo vial
+        </h3>
+        <p>
+         Registra un bache, se&ntilde;al da&ntilde;ada u otro riesgo como nota local de demostraci&oacute;n.
+        </p>
+        <a class="btn secondary small" href="#riskReportForm">
+         Crear reporte
+        </a>
+       </article>
+      </div>
+      <div class="grid driver-content-grid">
+       <section class="card">
+        <div class="section-title">
+         <h2>
+          Checklist antes de salir
+         </h2>
+         <span class="muted">
+          Tu avance personal
+         </span>
+        </div>
+        <div class="checklist-list" id="vehicleChecklist">
+        </div>
+       </section>
+       <section class="card">
+        <div class="section-title">
+         <h2>
+          Consejo vial del d&iacute;a
+         </h2>
+        </div>
+        <div class="daily-tip" id="dailyTip">
+        </div>
+        <div class="section-title" style="margin-top:22px">
+         <h2>
+          Mis logros
+         </h2>
+        </div>
+        <div class="achievement-list" id="myAchievements">
+        </div>
+       </section>
+      </div>
+      <div class="grid driver-content-grid" style="margin-top:16px">
+       <section class="card" id="savedRulesPanel">
+        <div class="section-title">
+         <h2>
+          Reglas guardadas
+         </h2>
+         <a class="muted" href="reglamento.html">
+          Ver cat&aacute;logo &rarr;
+         </a>
+        </div>
+        <div class="saved-rule-list" id="mySavedRules">
+        </div>
+       </section>
+       <section class="card">
+        <div class="section-title">
+         <h2>
+          Reportar un riesgo vial
+         </h2>
+        </div>
+        <form class="form-grid" id="riskReportForm">
+         <div class="field">
+          <label for="riskType">
+           Tipo de riesgo
+          </label>
+          <select id="riskType" required="">
+           <option value="">
+            Selecciona una opci&oacute;n
+           </option>
+           <option>
+            Bache o pavimento da&ntilde;ado
+           </option>
+           <option>
+            Se&ntilde;al da&ntilde;ada o ausente
+           </option>
+           <option>
+            Sem&aacute;foro fuera de servicio
+           </option>
+           <option>
+            Falta de iluminaci&oacute;n
+           </option>
+           <option>
+            Obstrucci&oacute;n o peligro peatonal
+           </option>
+           <option>
+            Otro riesgo
+           </option>
+          </select>
+         </div>
+         <div class="field">
+          <label for="riskLocation">
+           Ubicaci&oacute;n aproximada
+          </label>
+          <input id="riskLocation" maxlength="120" placeholder="Calle, cruce o referencia" required=""/>
+         </div>
+         <div class="field span-2">
+          <label for="riskDescription">
+           Descripci&oacute;n
+          </label>
+          <textarea id="riskDescription" maxlength="500" placeholder="Describe qu&eacute; observaste y por qu&eacute; representa un riesgo" required=""></textarea>
+         </div>
+         <div class="form-actions span-2">
+          <button type="submit">
+           Guardar reporte local
+          </button>
+         </div>
+        </form>
+        <p class="muted">
+         Este formulario no env&iacute;a el reporte a autoridades; solo lo guarda en este navegador.
+        </p>
+        <div class="risk-report-list" id="myRiskReports">
+        </div>
+       </section>
+      </div>
+      <section class="card" style="margin-top:16px">
+       <div class="section-title">
+        <h2>
+         Mi historial de cuestionarios
+        </h2>
+        <a class="btn secondary small" href="cuestionario.html">
+         Practicar otra vez
+        </a>
+       </div>
+       <div class="table-wrap">
+        <table>
+         <thead>
+          <tr>
+           <th>
+            Fecha
+           </th>
+           <th>
+            Resultado
+           </th>
+           <th>
+            Porcentaje
+           </th>
+           <th>
+            Estado
+           </th>
+          </tr>
+         </thead>
+         <tbody id="myQuizHistory">
+          <tr>
+           <td colspan="4">
+            Todav&iacute;a no has completado un cuestionario.
+           </td>
+          </tr>
+         </tbody>
+        </table>
+       </div>
+      </section>
+     </section>
+     <div class="section-title" data-admin-only="true">
+      <h2>
+       Actividades recientes
+      </h2>
+      <span class="muted">
+       &Uacute;ltimos movimientos &middot; octubre 2026
+      </span>
+     </div>
+     <div class="table-wrap" data-admin-only="true">
+      <table>
+       <thead>
+        <tr>
+         <th>
+          Usuario ficticio
+         </th>
+         <th>
+          Actividad
+         </th>
+         <th>
+          Fecha
+         </th>
+         <th>
+          Estado
+         </th>
+        </tr>
+       </thead>
+       <tbody id="recentActivity">
+        <tr>
+         <td>
+          Luc&iacute;a Hern&aacute;ndez
+         </td>
+         <td>
+          Cuestionario de seguridad vial
+         </td>
+         <td>
+          25 oct 2026
+         </td>
+         <td>
+          <span class="badge good">
+           Aprobado &middot; 8/10
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Daniel Mendoza
+         </td>
+         <td>
+          Registro de conductor
+         </td>
+         <td>
+          25 oct 2026
+         </td>
+         <td>
+          <span class="badge">
+           Registro guardado
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Sof&iacute;a R&iacute;os
+         </td>
+         <td>
+          Cuestionario de seguridad vial
+         </td>
+         <td>
+          24 oct 2026
+         </td>
+         <td>
+          <span class="badge good">
+           Aprobado &middot; 9/10
+          </span>
+         </td>
+        </tr>
+        <tr>
+         <td>
+          Jorge Salas
+         </td>
+         <td>
+          Cuestionario de seguridad vial
+         </td>
+         <td>
+          24 oct 2026
+         </td>
+         <td>
+          <span class="badge warn">
+           No aprobado &middot; 6/10
+          </span>
+         </td>
+        </tr>
+       </tbody>
+      </table>
+     </div>
+     <div class="notice" data-admin-only="true">
+      <span class="notice-icon">
+       i
+      </span>
+      <span>
+       Datos de demostraci&oacute;n; no son estad&iacute;sticas oficiales. Los nombres y actividades iniciales son ficticios.
+      </span>
+     </div>
+    </main>
+   </div>
+   <footer class="footer">
+    <span>
+     CECyTO Vial &middot; Villa Victoria
+    </span>
+    <span>
+     03 / 13 &middot; Panel general
+    </span>
+   </footer>
+   <div class="toast" id="toast">
+   </div>
+   <div class="modal-backdrop" id="modal">
+    <div class="modal">
+     <h2 id="modalTitle">
+      Confirmar acci&oacute;n
+     </h2>
+     <p id="modalText">
+      &iquest;Deseas continuar?
+     </p>
+     <div class="modal-actions">
+      <button class="secondary" id="modalCancel">
+       Cancelar
+      </button>
+      <button id="modalConfirm">
+       Confirmar
+      </button>
+     </div>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+   </script>
+   <script src="app.js">
+   </script>
+  </div>
+ </body>
+</html>
+

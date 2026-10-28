@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   CECyTO Vial | 06 / 13 &middot; Cuestionario
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="app-shell">
+   <header class="topbar">
+    <a class="brand" href="dashboard.html">
+     <img alt="CECyTO Vial &mdash; Educaci&oacute;n vial y gesti&oacute;n de conductores" class="brand-logo" src="logo-cecyto-vial.png"/>
+    </a>
+    <div class="top-user">
+     <div class="user-meta">
+      <strong id="headerName">
+       Mariana Torres
+      </strong>
+      <br/>
+      <span class="muted" id="headerRole">
+       Administraci&oacute;n
+      </span>
+     </div>
+     <div class="avatar" id="headerAvatar">
+      MT
+     </div>
+    </div>
+   </header>
+   <div class="workspace">
+    <aside class="sidebar">
+     <div class="nav-label">
+      Men&uacute; principal
+     </div>
+     <nav class="nav">
+      <a class="" href="dashboard.html">
+       <span class="nav-ico">
+        ⌂
+       </span>
+       Inicio
+      </a>
+      <a class="" href="reglamento.html">
+       <span class="nav-ico">
+        &nearrow;
+       </span>
+       Reglamento vial
+      </a>
+      <a class="active" href="cuestionario.html">
+       <span class="nav-ico">
+        &checkmark;
+       </span>
+       Cuestionarios
+      </a>
+      <a class="" data-admin-only="true" href="conductores.html">
+       <span class="nav-ico">
+        ♙
+       </span>
+       Conductores
+      </a>
+      <a class="" data-admin-only="true" href="estadisticas.html">
+       <span class="nav-ico">
+        ▥
+       </span>
+       Estad&iacute;sticas
+      </a>
+      <a class="" href="perfil.html">
+       <span class="nav-ico">
+        ◎
+       </span>
+       Mi perfil
+      </a>
+      <a class="" data-logout="true" href="#logout">
+       <span class="nav-ico">
+        &rarrhk;
+       </span>
+       Cerrar sesi&oacute;n
+      </a>
+     </nav>
+     <div class="location-card">
+      <strong>
+       Villa Victoria
+      </strong>
+      Estado de M&eacute;xico
+      <br/>
+     </div>
+    </aside>
+    <main class="main">
+     <div class="breadcrumb">
+      Educaci&oacute;n vial / Seguridad vial
+     </div>
+     <div class="page-head">
+      <div>
+       <h1>
+        Cuestionario
+       </h1>
+       <p>
+        Refuerza tus conocimientos sobre conducci&oacute;n responsable.
+       </p>
+      </div>
+     </div>
+     <div class="quiz-layout">
+      <section class="card">
+       <div style="display:flex;justify-content:space-between;gap:12px">
+        <strong id="questionNumber">
+         Pregunta 1 de 10
+        </strong>
+        <small id="questionCategory">
+         Seguridad vial &middot; Prevenci&oacute;n
+        </small>
+       </div>
+       <div class="progress">
+        <span id="quizProgress" style="width:10%">
+        </span>
+       </div>
+       <h3 id="questionText" style="margin-top:22px;font-size:18px">
+        &iquest;Qu&eacute; debes hacer al acercarte a un cruce peatonal con personas esperando?
+       </h3>
+       <div id="answerOptions">
+       </div>
+       <div class="form-actions" style="justify-content:space-between">
+        <button class="secondary" id="prevQuestion">
+         Anterior
+        </button>
+        <div>
+         <button class="secondary" id="finishQuiz">
+          Finalizar cuestionario
+         </button>
+         <button id="nextQuestion">
+          Siguiente &rarr;
+         </button>
+        </div>
+       </div>
+      </section>
+      <aside class="grid">
+       <div class="card">
+        <h3>
+         Preguntas pendientes
+        </h3>
+        <p id="pendingText">
+         Quedan 10 preguntas sin responder.
+        </p>
+        <div class="progress">
+         <span id="answerProgress" style="width:0%">
+         </span>
+        </div>
+       </div>
+       <div class="card">
+        <h3>
+         Esquema de confirmaci&oacute;n
+        </h3>
+        <p id="confirmText">
+         A&uacute;n no hay respuestas. Puedes revisar cada pregunta antes de finalizar.
+        </p>
+        <button class="secondary" id="reviewQuiz" style="width:100%">
+         Revisar respuestas
+        </button>
+       </div>
+      </aside>
+     </div>
+    </main>
+   </div>
+   <footer class="footer">
+    <span>
+     CECyTO Vial &middot; Villa Victoria
+    </span>
+    <span>
+     06 / 13 &middot; Cuestionario
+    </span>
+   </footer>
+   <div class="toast" id="toast">
+   </div>
+   <div class="modal-backdrop" id="modal">
+    <div class="modal">
+     <h2 id="modalTitle">
+      Confirmar acci&oacute;n
+     </h2>
+     <p id="modalText">
+      &iquest;Deseas continuar?
+     </p>
+     <div class="modal-actions">
+      <button class="secondary" id="modalCancel">
+       Cancelar
+      </button>
+      <button id="modalConfirm">
+       Confirmar
+      </button>
+     </div>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+   </script>
+   <script src="app.js">
+   </script>
+  </div>
+ </body>
+</html>
+

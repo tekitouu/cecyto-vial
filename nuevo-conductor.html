@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   CECyTO Vial | 08 / 13 &middot; Registro de conductor
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="app-shell">
+   <header class="topbar">
+    <a class="brand" href="dashboard.html">
+     <img alt="CECyTO Vial &mdash; Educaci&oacute;n vial y gesti&oacute;n de conductores" class="brand-logo" src="logo-cecyto-vial.png"/>
+    </a>
+    <div class="top-user">
+     <div class="user-meta">
+      <strong id="headerName">
+       Mariana Torres
+      </strong>
+      <br/>
+      <span class="muted" id="headerRole">
+       Administraci&oacute;n
+      </span>
+     </div>
+     <div class="avatar" id="headerAvatar">
+      MT
+     </div>
+    </div>
+   </header>
+   <div class="workspace">
+    <aside class="sidebar">
+     <div class="nav-label">
+      Men&uacute; principal
+     </div>
+     <nav class="nav">
+      <a class="" href="dashboard.html">
+       <span class="nav-ico">
+        ⌂
+       </span>
+       Inicio
+      </a>
+      <a class="" href="reglamento.html">
+       <span class="nav-ico">
+        &nearrow;
+       </span>
+       Reglamento vial
+      </a>
+      <a class="" href="cuestionario.html">
+       <span class="nav-ico">
+        &checkmark;
+       </span>
+       Cuestionarios
+      </a>
+      <a class="active" data-admin-only="true" href="conductores.html">
+       <span class="nav-ico">
+        ♙
+       </span>
+       Conductores
+      </a>
+      <a class="" data-admin-only="true" href="estadisticas.html">
+       <span class="nav-ico">
+        ▥
+       </span>
+       Estad&iacute;sticas
+      </a>
+      <a class="" href="perfil.html">
+       <span class="nav-ico">
+        ◎
+       </span>
+       Mi perfil
+      </a>
+      <a class="" data-logout="true" href="#logout">
+       <span class="nav-ico">
+        &rarrhk;
+       </span>
+       Cerrar sesi&oacute;n
+      </a>
+     </nav>
+     <div class="location-card">
+      <strong>
+       Villa Victoria
+      </strong>
+      Estado de M&eacute;xico
+      <br/>
+     </div>
+    </aside>
+    <main class="main">
+     <div class="breadcrumb">
+      Conductores / Nuevo registro
+     </div>
+     <div class="page-head">
+      <div>
+       <h1>
+        Registrar nuevo conductor
+       </h1>
+       <p>
+        Captura la informaci&oacute;n de seguimiento con datos ficticios de demostraci&oacute;n.
+       </p>
+      </div>
+     </div>
+     <form class="card" id="driverForm">
+      <div style="display:flex;justify-content:space-between;margin-bottom:16px">
+       <h3>
+        Datos del registro
+       </h3>
+       <small>
+        * Campos obligatorios
+       </small>
+      </div>
+      <div class="form-grid">
+       <div class="field">
+        <label>
+         Nombre completo *
+        </label>
+        <input id="driverName" placeholder="Mauricio &Aacute;lvarez Soto" required=""/>
+       </div>
+       <div class="field">
+        <label>
+         Identificador de registro *
+        </label>
+        <input id="driverId" placeholder="REG-DEMO-0129" required=""/>
+       </div>
+       <div class="field">
+        <label>
+         Tel&eacute;fono *
+        </label>
+        <input id="driverPhone" inputmode="numeric" maxlength="10" pattern="[0-9]{10}" placeholder="10 d&iacute;gitos" required=""/>
+        <small>
+         Ingresa exactamente 10 d&iacute;gitos.
+        </small>
+       </div>
+       <div class="field span-2">
+        <label>
+         Direcci&oacute;n *
+        </label>
+        <input id="driverAddress" placeholder="Calle de Ejemplo 12, colonia ficticia" required=""/>
+       </div>
+       <div class="field">
+        <label>
+         Tipo de falta *
+        </label>
+        <select id="driverType" required="">
+         <option>
+          Exceso de velocidad
+         </option>
+         <option>
+          Uso del celular
+         </option>
+         <option>
+          Falta de cintur&oacute;n
+         </option>
+         <option>
+          Estacionamiento prohibido
+         </option>
+        </select>
+       </div>
+       <div class="field">
+        <label>
+         Fecha *
+        </label>
+        <input id="driverDate" required="" type="date"/>
+       </div>
+       <div class="field span-3">
+        <label>
+         Observaciones
+        </label>
+        <textarea id="driverNotes" placeholder="Notas de seguimiento educativo (opcional)"></textarea>
+       </div>
+      </div>
+      <div class="notice">
+       <span class="notice-icon">
+        i
+       </span>
+       <span>
+        Revisa los datos antes de guardar. No captures CURP, licencia u otros identificadores personales reales en esta maqueta.
+       </span>
+      </div>
+      <div class="form-actions">
+       <button type="submit">
+        Guardar registro
+       </button>
+       <a class="btn secondary" data-admin-only="true" href="conductores.html">
+        Cancelar
+       </a>
+      </div>
+     </form>
+    </main>
+   </div>
+   <footer class="footer">
+    <span>
+     CECyTO Vial &middot; Villa Victoria
+    </span>
+    <span>
+     08 / 13 &middot; Registro de conductor
+    </span>
+   </footer>
+   <div class="toast" id="toast">
+   </div>
+   <div class="modal-backdrop" id="modal">
+    <div class="modal">
+     <h2 id="modalTitle">
+      Confirmar acci&oacute;n
+     </h2>
+     <p id="modalText">
+      &iquest;Deseas continuar?
+     </p>
+     <div class="modal-actions">
+      <button class="secondary" id="modalCancel">
+       Cancelar
+      </button>
+      <button id="modalConfirm">
+       Confirmar
+      </button>
+     </div>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+   </script>
+   <script src="app.js">
+   </script>
+  </div>
+ </body>
+</html>
+

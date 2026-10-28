@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   CECyTO Vial | 11 / 13 &middot; Perfil
+  </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <div class="app-shell">
+   <header class="topbar">
+    <a class="brand" href="dashboard.html">
+     <img alt="CECyTO Vial &mdash; Educaci&oacute;n vial y gesti&oacute;n de conductores" class="brand-logo" src="logo-cecyto-vial.png"/>
+    </a>
+    <div class="top-user">
+     <div class="user-meta">
+      <strong id="headerName">
+       Mariana Torres
+      </strong>
+      <br/>
+      <span class="muted" id="headerRole">
+       Administraci&oacute;n
+      </span>
+     </div>
+     <div class="avatar" id="headerAvatar">
+      MT
+     </div>
+    </div>
+   </header>
+   <div class="workspace">
+    <aside class="sidebar">
+     <div class="nav-label">
+      Men&uacute; principal
+     </div>
+     <nav class="nav">
+      <a class="" href="dashboard.html">
+       <span class="nav-ico">
+        ⌂
+       </span>
+       Inicio
+      </a>
+      <a class="" href="reglamento.html">
+       <span class="nav-ico">
+        &nearrow;
+       </span>
+       Reglamento vial
+      </a>
+      <a class="" href="cuestionario.html">
+       <span class="nav-ico">
+        &checkmark;
+       </span>
+       Cuestionarios
+      </a>
+      <a class="" data-admin-only="true" href="conductores.html">
+       <span class="nav-ico">
+        ♙
+       </span>
+       Conductores
+      </a>
+      <a class="" data-admin-only="true" href="estadisticas.html">
+       <span class="nav-ico">
+        ▥
+       </span>
+       Estad&iacute;sticas
+      </a>
+      <a class="active" href="perfil.html">
+       <span class="nav-ico">
+        ◎
+       </span>
+       Mi perfil
+      </a>
+      <a class="" data-logout="true" href="#logout">
+       <span class="nav-ico">
+        &rarrhk;
+       </span>
+       Cerrar sesi&oacute;n
+      </a>
+     </nav>
+     <div class="location-card">
+      <strong>
+       Villa Victoria
+      </strong>
+      Estado de M&eacute;xico
+      <br/>
+     </div>
+    </aside>
+    <main class="main">
+     <div class="breadcrumb">
+      Cuenta / Informaci&oacute;n personal
+     </div>
+     <div class="page-head">
+      <div>
+       <h1>
+        Mi perfil
+       </h1>
+       <p>
+        Consulta la informaci&oacute;n de tu cuenta y administra tu contrase&ntilde;a.
+       </p>
+      </div>
+     </div>
+     <div class="card">
+      <div class="profile-hero">
+       <div class="profile-avatar" id="profileInitials">
+        MT
+       </div>
+       <div class="field" style="min-width:160px;max-width:210px">
+        <label for="profilePhotoInput">
+         Cambiar foto de perfil
+        </label>
+        <input accept="image/*" id="profilePhotoInput" type="file"/>
+        <small>
+         Imagen JPG, PNG o WebP; m&aacute;ximo 1.5 MB.
+        </small>
+       </div>
+       <div style="flex:1">
+        <small>
+         Nombre completo
+        </small>
+        <h2 id="profileName" style="margin:2px 0">
+         Mariana Torres Luna
+        </h2>
+        <p id="profileEmail">
+         mariana.torres@ejemplo.test
+        </p>
+       </div>
+       <a class="btn secondary" href="editar-perfil.html">
+        Editar datos
+       </a>
+      </div>
+      <div class="profile-details">
+       <div class="detail">
+        <span>
+         Correo electr&oacute;nico
+        </span>
+        <strong id="profileEmail2">
+         mariana.torres@ejemplo.test
+        </strong>
+       </div>
+       <div class="detail">
+        <span>
+         Rol
+        </span>
+        <strong id="profileRole">
+         Administraci&oacute;n
+        </strong>
+       </div>
+       <div class="detail">
+        <span>
+         Estado de cuenta
+        </span>
+        <strong>
+         <span class="badge good">
+          Activa &middot; demostraci&oacute;n
+         </span>
+        </strong>
+       </div>
+      </div>
+     </div>
+     <div class="card" style="margin-top:16px">
+      <h2>
+       Cambiar contrase&ntilde;a
+      </h2>
+      <p>
+       Para actualizarla, confirma tu contrase&ntilde;a actual.
+      </p>
+      <form id="passwordForm">
+       <div class="form-grid">
+        <div class="field">
+         <label>
+          Contrase&ntilde;a actual
+         </label>
+         <input id="currentPassword" required="" type="password" value="demo1234"/>
+        </div>
+        <div class="field">
+         <label>
+          Nueva contrase&ntilde;a
+         </label>
+         <input id="newPassword" minlength="8" placeholder="Escribe una nueva contrase&ntilde;a" required="" type="password"/>
+        </div>
+        <div class="field">
+         <label>
+          Confirmar nueva contrase&ntilde;a
+         </label>
+         <input id="confirmPassword" minlength="8" placeholder="Repite la nueva contrase&ntilde;a" required="" type="password"/>
+        </div>
+       </div>
+       <div class="form-actions">
+        <button type="submit">
+         Guardar cambios
+        </button>
+       </div>
+      </form>
+     </div>
+     <div class="notice">
+      <span class="notice-icon">
+       i
+      </span>
+      <span>
+       Cuenta de ejemplo. El nombre, correo y rol son ficticios; no hay verificaci&oacute;n real de identidad.
+      </span>
+     </div>
+    </main>
+   </div>
+   <footer class="footer">
+    <span>
+     CECyTO Vial &middot; Villa Victoria
+    </span>
+    <span>
+     11 / 13 &middot; Perfil
+    </span>
+   </footer>
+   <div class="toast" id="toast">
+   </div>
+   <div class="modal-backdrop" id="modal">
+    <div class="modal">
+     <h2 id="modalTitle">
+      Confirmar acci&oacute;n
+     </h2>
+     <p id="modalText">
+      &iquest;Deseas continuar?
+     </p>
+     <div class="modal-actions">
+      <button class="secondary" id="modalCancel">
+       Cancelar
+      </button>
+      <button id="modalConfirm">
+       Confirmar
+      </button>
+     </div>
+    </div>
+   </div>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+   </script>
+   <script src="app.js">
+   </script>
+  </div>
+ </body>
+</html>
+
